@@ -3,17 +3,10 @@ package Examen;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MySql {
 	private Connection connection = null;
-	private Statement statement = null;
 	private PreparedStatement preparedStatement = null;
-	private ResultSet resultSet = null;
 	final private String host = "localhost:3306/prueba";
 	final private String usuario = "pedro";
 	final private String contraseña = "123";
@@ -28,7 +21,6 @@ public class MySql {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://" + host + "?"
 					+ "user=" + usuario + "&password=" + contraseña );
-			statement = connection.createStatement();	
 			}
 		catch(Exception e) {
 			throw e;

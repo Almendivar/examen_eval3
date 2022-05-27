@@ -7,19 +7,19 @@ public class Ejercicio1 {
 	
 	/*
 	 * Pre:---
-	 * Post: En este método creamos un objeto MySql y cargamos la base de datos, posteriormente 
-	 * leemos le fichero "hablanosDelDon.txt" y comprobamos cada línea para ver que 
+	 * Post: En este mï¿½todo creamos un objeto MySql y cargamos la base de datos, posteriormente 
+	 * leemos le fichero "hablanosDelDon.txt" y comprobamos cada lï¿½nea para ver que 
 	 * letras comienzan o terminan por el String letra. Las palabras indicadas son 
-	 * añadidas a la base de datos a través del método "añadir" del objeto MySql.
+	 * aï¿½adidas a la base de datos a travï¿½s del mï¿½todo "aï¿½adir" del objeto MySql.
 	 */
 	public static void fichero () {
 		try {
 			MySql base = new MySql();
 			base.cargarBase();
-			String letra = "n";
+			String letra = "s";
 			File f = new File("C:\\Users\\diegi\\Desktop\\examen\\hablanosDelDon.txt");
 			Scanner lineas = new Scanner(f);
-			int num = 0; 
+			int num = 1; 
 			System.out.println("La letra es "+ letra);
 			while(lineas.hasNextLine()) {
 				String linea = lineas.nextLine();
@@ -31,7 +31,7 @@ public class Ejercicio1 {
 					if(palabras[i].substring(0,1).equals(letra) || 
 							palabras[i].substring(palabras[i].length() - 1,palabras[i].length()).equals(letra)) {
 						System.out.println("Palabra: " + palabras[i] + " Linea: "+num);
-						base.añadir(letra, palabras[i], num);
+						base.aÃ±adir(letra, palabras[i], num);
 					}
 				}
 				num++;
@@ -45,7 +45,7 @@ public class Ejercicio1 {
 	
 	/*
 	 * Pre:---
-	 * Post: En el método main, únicamente llamamos al método fichero.
+	 * Post: En el mï¿½todo main, ï¿½nicamente llamamos al mï¿½todo fichero.
 	 */
 	public static void main(String[]args) {
 		fichero();
