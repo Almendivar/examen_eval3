@@ -21,7 +21,7 @@ public class MySql {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://" + host + "?"
 					+ "user=" + usuario + "&password=" + contraseña );
-			}
+		}
 		catch(Exception e) {
 			throw e;
 		}

@@ -7,10 +7,10 @@ public class Ejercicio1 {
 	
 	/*
 	 * Pre:---
-	 * Post: En este m�todo creamos un objeto MySql y cargamos la base de datos, posteriormente 
-	 * leemos le fichero "hablanosDelDon.txt" y comprobamos cada l�nea para ver que 
+	 * Post: En este método creamos un objeto MySql y cargamos la base de datos, posteriormente 
+	 * leemos le fichero "hablanosDelDon.txt" y comprobamos cada línea para ver que 
 	 * letras comienzan o terminan por el String letra. Las palabras indicadas son 
-	 * a�adidas a la base de datos a trav�s del m�todo "a�adir" del objeto MySql.
+	 * añadidas a la base de datos a través del método añadir" del objeto MySql.
 	 */
 	public static void fichero () {
 		try {
@@ -45,7 +45,7 @@ public class Ejercicio1 {
 	
 	/*
 	 * Pre:---
-	 * Post: En el m�todo main, �nicamente llamamos al m�todo fichero.
+	 * Post: En el método main, únicamente llamamos al método fichero.
 	 */
 	public static void main(String[]args) {
 		fichero();
